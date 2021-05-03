@@ -26,6 +26,11 @@ tf.keras.layers.experimental.preprocessing.RandomFlip(...)
 <img src="./random-flip/loss.png">
 <img src="./random-flip/epoch_loss.svg">
 
+**Результат применения функции:**
+<img src="./random-flip/horizontal_and_vertical.png">
+<img src="./random-flip/vertical.png">
+<img src="./random-flip/horizontal.png">
+
 ### Вывод:
 Наилучшее значение точности наблюдается на зелёном графике 67,78%, что соответствует горизонтальному отражению. Все вариации функции с различными параметрами достигли максимальной точности на 21 эпохе.
 
@@ -47,6 +52,9 @@ tf.keras.layers.experimental.preprocessing.RandomCrop(...)
 **График функции потерь:**
 <img src="./random-crop/loss.png">
 <img src="./random-crop/epoch_loss.svg">
+
+**Результат применения функции:**
+<img src="./random-crop/crop.png">
 
 ### Вывод:
 Максимальное значение точности достигается при значениях кропинга 300*250 и равное 67,2% (синий график). В данном случае, пиковое значение точности так же достигается на 21 эпохе.
@@ -82,6 +90,16 @@ tf.keras.layers.experimental.preprocessing.RandomRotation(...)
 <img src="./random-rotation/1/loss.png">
 <img src="./random-rotation/1/epoch_loss.svg">
 
+**Результат применения функции:**
+* fill_mode = constant
+<img src="./random-rotation/rotation-1.png">
+* fill_mode = wrap
+<img src="./random-rotation/rotation-2.png">
+* fill_mode = reflect
+<img src="./random-rotation/rotation-3.png">
+* fill_mode = nearest
+<img src="./random-rotation/rotation-4.png">
+
 ### Вывод:
 В данном эксперименте наилучшее значение функции с параметром factor = 0.1 равно 67.19%, для того же значения с параметрами 0.5 и 1 значение точности уже меньше: 65,46 и 65,31 соответственно. Делая вывод из документации и графиков, при максимальной точности картинка совершает поворот в случайном направлении на 36* и заполнением фона после поворота монотонным цветом.
 
@@ -97,6 +115,9 @@ tf.keras.layers.experimental.preprocessing.RandomRotation(...)
 **Графики функции потерь:**
 <img src="./random-multipl/loss.png">
 <img src="./random-multipl/epoch_loss.svg">
+
+**Результат применения комбинации функций:**
+<img src="./random-multipl/multi.png">
 
 ### Вывод:
 Как видно из графика максимальная точность достигается на 21 и значении точности в 66,1%. 
