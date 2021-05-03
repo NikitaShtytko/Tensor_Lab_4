@@ -93,10 +93,13 @@ tf.keras.layers.experimental.preprocessing.RandomRotation(...)
 **Результат применения функции:**
 * fill_mode = constant
 <img src="./random-rotation/rotation-1.png">
+
 * fill_mode = wrap
 <img src="./random-rotation/rotation-2.png">
+
 * fill_mode = reflect
 <img src="./random-rotation/rotation-3.png">
+
 * fill_mode = nearest
 <img src="./random-rotation/rotation-4.png">
 
